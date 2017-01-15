@@ -1,26 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import configureStore from './configureStore'
+import Root from './Root'
 
-import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-
-import kitchenApp from './reducers'
-import App from './components/App'
-
-const store = createStore(kitchenApp)
-
-store.dispatch({
-    type: 'ADD_INGREDIENT',
-    payload: {
-        id: "1",
-        name: "Apple"
-    }
-})
+const store = configureStore()
 
 ReactDOM.render(
-    <Provider store={store}>
-        <App />
-    </Provider>,
+    <Root store={store} />,
     document.getElementById('root')
 )
 
