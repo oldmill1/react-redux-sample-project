@@ -5,7 +5,8 @@ const ingredients = (state = [], action) => {
                 ...state,
                 {
                     id: action.payload.id,
-                    name: action.payload.name
+                    name: action.payload.name,
+                    type: action.payload.type
                 }
             ]
        default:

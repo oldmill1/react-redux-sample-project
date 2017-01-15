@@ -5,5 +5,6 @@ export const addIngredient = (text) => ({
     payload: {
         id: v4(),
         name,
+        type
     }
 })

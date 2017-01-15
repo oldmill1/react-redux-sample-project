@@ -1,10 +1,20 @@
 import { createStore } from 'redux'
 import kitchenApp from './reducers'
+import { v4 } from 'uuid'
 
 const data = {
     ingredients: [{
-        id: 1,
-        name: 'Pear'
+        id: v4(),
+        name: 'Pear',
+        type: 'produce'
+    },{
+        id: v4(),
+        name: 'Apple',
+        type: 'produce'
+    },{
+        id: v4(),
+        name: 'Chicken',
+        type: 'meat'
     }]
 }
 
