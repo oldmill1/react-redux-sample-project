@@ -1,6 +1,6 @@
 ## Running the Project
 
-1. Download the zip or clone directly into whatever directory you wish, using `git@github.com:oldmill1/react-redux-sample-project.git`
+1. Download the zip or clone directly into whatever directory you wish, by doing `git clone git@github.com:oldmill1/react-redux-sample-project.git`
 
 2. `cd` into `react-redux-sample-project`
 
