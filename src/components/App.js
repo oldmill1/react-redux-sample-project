@@ -2,9 +2,9 @@ import React from 'react'
 import IngredientListPage from './IngredientListPage'
 import Footer from './Footer'
 
-const App = () => (
+const App = ({ params }) => (
     <div>
-        <IngredientListPage />
+        <IngredientListPage filter={params.filter || 'all'} />
         <Footer />
     </div>
 )
