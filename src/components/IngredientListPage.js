@@ -15,16 +15,13 @@ const getIngredients = (ingredients, filter) => {
     }
 }
 
-// "ownProps" means the filter passed to the
-// connect component we are writing, eg.
-// <IngredientListPage filter="all" />
-const mapStateToProps = (state, ownProps) => ({
+const mapStateToProps = (state, { params }) => ({
     ingredients: getIngredients(
         state.ingredients,
-        ownProps.filter
+        params.filter || 'all'
     )
 })
 
-const IngredientListPage = connect(mapStateToProps)(IngredientList)
+const IngredientListPage = withRouter(connect(mapStateToProps)(IngredientList))
 
 export default IngredientListPage

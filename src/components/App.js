@@ -4,7 +4,7 @@ import Footer from './Footer'
 
 const App = ({ params }) => (
     <div>
-        <IngredientListPage filter={params.filter || 'all'} />
+        <IngredientListPage />
         <Footer />
     </div>
 )
